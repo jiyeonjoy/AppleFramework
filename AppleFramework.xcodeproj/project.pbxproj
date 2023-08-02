@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAAC34582A7A2278002E481B /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC34572A7A2278002E481B /* Detail.storyboard */; };
+		DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */; };
 		DAAE9BBE2A790944007F55D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9BBD2A790944007F55D0 /* AppDelegate.swift */; };
 		DAAE9BC02A790944007F55D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9BBF2A790944007F55D0 /* SceneDelegate.swift */; };
 		DAAE9BC52A790944007F55D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAE9BC32A790944007F55D0 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAAC34572A7A2278002E481B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewController.swift; sourceTree = "<group>"; };
 		DAAE9BBA2A790944007F55D0 /* AppleFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAE9BBD2A790944007F55D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAE9BBF2A790944007F55D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +112,9 @@
 				DAAE9BED2A790A19007F55D0 /* FrameworkData.swift */,
 				DAAE9BEF2A790A4A007F55D0 /* FrameworkListViewController.swift */,
 				DAAE9BF12A790A56007F55D0 /* FrameworkCell.swift */,
+				DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */,
 				DAAE9BC32A790944007F55D0 /* Main.storyboard */,
+				DAAC34572A7A2278002E481B /* Detail.storyboard */,
 				DAAE9BC62A790945007F55D0 /* Assets.xcassets */,
 				DAAE9BC82A790945007F55D0 /* LaunchScreen.storyboard */,
 				DAAE9BCB2A790945007F55D0 /* Info.plist */,
@@ -240,6 +246,7 @@
 				DAAE9BCA2A790945007F55D0 /* LaunchScreen.storyboard in Resources */,
 				DAAE9BC72A790945007F55D0 /* Assets.xcassets in Resources */,
 				DAAE9BC52A790944007F55D0 /* Main.storyboard in Resources */,
+				DAAC34582A7A2278002E481B /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				DAAE9BEE2A790A19007F55D0 /* FrameworkData.swift in Sources */,
 				DAAE9BC02A790944007F55D0 /* SceneDelegate.swift in Sources */,
 				DAAE9BF22A790A56007F55D0 /* FrameworkCell.swift in Sources */,
+				DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */,
 				DAAE9BF02A790A4A007F55D0 /* FrameworkListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

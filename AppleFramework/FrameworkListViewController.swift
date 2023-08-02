@@ -41,6 +41,7 @@ class FrameworkListViewController: UIViewController {
         
         // layer
         collectionView.collectionViewLayout = layout()
+        collectionView.delegate = self
     }
     
     private func layout() -> UICollectionViewCompositionalLayout {
@@ -67,5 +68,11 @@ extension FrameworkListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let framework = list[indexPath.item]
         print(">>> selected: \(framework.name)")
+        
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
+        vc.framework = framework
+        
+        present(vc, animated: true)
     }
 }
