@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA7D9CF02A8CA66A002F02A0 /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */; };
+		DA7D9CF22A8CA67A002F02A0 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */; };
 		DAAC34582A7A2278002E481B /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC34572A7A2278002E481B /* Detail.storyboard */; };
 		DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */; };
 		DAAE9BBE2A790944007F55D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9BBD2A790944007F55D0 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
+		DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
 		DAAC34572A7A2278002E481B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewController.swift; sourceTree = "<group>"; };
 		DAAE9BBA2A790944007F55D0 /* AppleFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA7D9CEC2A8CA5DD002F02A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */,
+				DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA7D9CED2A8CA607002F02A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE9BEF2A790A4A007F55D0 /* FrameworkListViewController.swift */,
+				DAAE9BF12A790A56007F55D0 /* FrameworkCell.swift */,
+				DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */,
+				DAAE9BC32A790944007F55D0 /* Main.storyboard */,
+				DAAC34572A7A2278002E481B /* Detail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA7D9CEE2A8CA619002F02A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE9BED2A790A19007F55D0 /* FrameworkData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAAE9BB12A790944007F55D0 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +142,9 @@
 			children = (
 				DAAE9BBD2A790944007F55D0 /* AppDelegate.swift */,
 				DAAE9BBF2A790944007F55D0 /* SceneDelegate.swift */,
-				DAAE9BED2A790A19007F55D0 /* FrameworkData.swift */,
-				DAAE9BEF2A790A4A007F55D0 /* FrameworkListViewController.swift */,
-				DAAE9BF12A790A56007F55D0 /* FrameworkCell.swift */,
-				DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */,
-				DAAE9BC32A790944007F55D0 /* Main.storyboard */,
-				DAAC34572A7A2278002E481B /* Detail.storyboard */,
+				DA7D9CEC2A8CA5DD002F02A0 /* ViewModel */,
+				DA7D9CEE2A8CA619002F02A0 /* Model */,
+				DA7D9CED2A8CA607002F02A0 /* View */,
 				DAAE9BC62A790945007F55D0 /* Assets.xcassets */,
 				DAAE9BC82A790945007F55D0 /* LaunchScreen.storyboard */,
 				DAAE9BCB2A790945007F55D0 /* Info.plist */,
@@ -273,9 +303,11 @@
 			files = (
 				DAAE9BBE2A790944007F55D0 /* AppDelegate.swift in Sources */,
 				DAAE9BEE2A790A19007F55D0 /* FrameworkData.swift in Sources */,
+				DA7D9CF02A8CA66A002F02A0 /* FrameworkListViewModel.swift in Sources */,
 				DAAE9BC02A790944007F55D0 /* SceneDelegate.swift in Sources */,
 				DAAE9BF22A790A56007F55D0 /* FrameworkCell.swift in Sources */,
 				DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */,
+				DA7D9CF22A8CA67A002F02A0 /* FrameworkDetailViewModel.swift in Sources */,
 				DAAE9BF02A790A4A007F55D0 /* FrameworkListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

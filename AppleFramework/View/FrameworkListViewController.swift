@@ -21,11 +21,11 @@ class FrameworkListViewController: UIViewController {
     
     // Combine
     var subscriptions = Set<AnyCancellable>()
-    let didSelect = PassthroughSubject<AppleFramework, Never>()
-    let items = CurrentValueSubject<[AppleFramework], Never>(AppleFramework.list)
+    var viewModel: FrameworkListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = FrameworkListViewModel(items: AppleFramework.list)
         configureCollectionView()
         bind()
     }
@@ -33,7 +33,8 @@ class FrameworkListViewController: UIViewController {
     private func bind() {
         // input: 사용자 인풋을 받아서, 처리
         // - item 선택 시 처리
-        didSelect
+        viewModel?.selectedItem
+            .compactMap{ $0 }
             .receive(on: RunLoop.main)
             .sink { [unowned self] framework in
                 let sb = UIStoryboard(name: "Detail", bundle: nil)
@@ -44,7 +45,7 @@ class FrameworkListViewController: UIViewController {
         
         // output: data, state 변경에 따라서, UI 업데이트 할것
         // - items 세팅이 되었을때 컬렉션뷰를 업데이트
-        items
+        viewModel?.items
             .receive(on: RunLoop.main)
             .sink{ [unowned self] list in
                 self.applySectionItems(list)
@@ -95,8 +96,7 @@ class FrameworkListViewController: UIViewController {
 
 extension FrameworkListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let framework = items.value[indexPath.item]
-        print(">>> selected: \(framework.name)")
-        didSelect.send(framework)
+        viewModel?.didSelect(at: indexPath)
+        print(">>> selected index: \(indexPath.item)")
     }
 }
