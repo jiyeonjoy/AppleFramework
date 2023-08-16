@@ -17,10 +17,7 @@ class FrameworkDetailViewController: UIViewController {
     
     // Combine
     var subscriptions = Set<AnyCancellable>()
-    let framework = CurrentValueSubject<AppleFramework, Never>(
-        AppleFramework(name: "Unknown", imageName: "", urlString: "", description: "")
-    )
-    let buttonTapped = PassthroughSubject<String, Never>()
+    var viewModel: FrameworkDetailViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +25,13 @@ class FrameworkDetailViewController: UIViewController {
     }
     
     private func bind() {
-        framework
+        viewModel?.framework
             .receive(on: RunLoop.main)
             .sink { [unowned self] framework in
                 self.updateUI(framework)
         }.store(in: &subscriptions)
         
-        buttonTapped
+        viewModel?.buttonTapped
             .receive(on: RunLoop.main)
             .compactMap { URL(string: $0) }
             .sink { [unowned self] url in
@@ -50,6 +47,6 @@ class FrameworkDetailViewController: UIViewController {
     }
     
     @IBAction func learnMoreTapped(_ sender: Any) {
-        buttonTapped.send(framework.value.urlString)
+        viewModel?.learnMoreTapped()
     }
 }
