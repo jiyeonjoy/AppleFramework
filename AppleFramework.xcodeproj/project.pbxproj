@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA7D9CF02A8CA66A002F02A0 /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */; };
 		DA7D9CF22A8CA67A002F02A0 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */; };
+		DAA5CCC82A94764A00003DBD /* FrameworkDetailViewModelSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CCC72A94764A00003DBD /* FrameworkDetailViewModelSwiftUI.swift */; };
+		DAA5CCCA2A94766E00003DBD /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CCC92A94766E00003DBD /* FrameworkDetailView.swift */; };
+		DAA5CCCC2A94768C00003DBD /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CCCB2A94768C00003DBD /* SafariView.swift */; };
 		DAAC34582A7A2278002E481B /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC34572A7A2278002E481B /* Detail.storyboard */; };
 		DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */; };
 		DAAE9BBE2A790944007F55D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9BBD2A790944007F55D0 /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
 		DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
+		DAA5CCC72A94764A00003DBD /* FrameworkDetailViewModelSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModelSwiftUI.swift; sourceTree = "<group>"; };
+		DAA5CCC92A94766E00003DBD /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
+		DAA5CCCB2A94768C00003DBD /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		DAAC34572A7A2278002E481B /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewController.swift; sourceTree = "<group>"; };
 		DAAE9BBA2A790944007F55D0 /* AppleFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,7 @@
 			children = (
 				DA7D9CEF2A8CA66A002F02A0 /* FrameworkListViewModel.swift */,
 				DA7D9CF12A8CA67A002F02A0 /* FrameworkDetailViewModel.swift */,
+				DAA5CCC72A94764A00003DBD /* FrameworkDetailViewModelSwiftUI.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 				DAAC34592A7A256E002E481B /* FrameworkDetailViewController.swift */,
 				DAAE9BC32A790944007F55D0 /* Main.storyboard */,
 				DAAC34572A7A2278002E481B /* Detail.storyboard */,
+				DAA5CCC92A94766E00003DBD /* FrameworkDetailView.swift */,
+				DAA5CCCB2A94768C00003DBD /* SafariView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,11 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAE9BBE2A790944007F55D0 /* AppDelegate.swift in Sources */,
+				DAA5CCCC2A94768C00003DBD /* SafariView.swift in Sources */,
 				DAAE9BEE2A790A19007F55D0 /* FrameworkData.swift in Sources */,
 				DA7D9CF02A8CA66A002F02A0 /* FrameworkListViewModel.swift in Sources */,
 				DAAE9BC02A790944007F55D0 /* SceneDelegate.swift in Sources */,
 				DAAE9BF22A790A56007F55D0 /* FrameworkCell.swift in Sources */,
 				DAAC345A2A7A256E002E481B /* FrameworkDetailViewController.swift in Sources */,
+				DAA5CCCA2A94766E00003DBD /* FrameworkDetailView.swift in Sources */,
+				DAA5CCC82A94764A00003DBD /* FrameworkDetailViewModelSwiftUI.swift in Sources */,
 				DA7D9CF22A8CA67A002F02A0 /* FrameworkDetailViewModel.swift in Sources */,
 				DAAE9BF02A790A4A007F55D0 /* FrameworkListViewController.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 class FrameworkListViewController: UIViewController {
     
@@ -37,11 +38,17 @@ class FrameworkListViewController: UIViewController {
             .compactMap{ $0 }
             .receive(on: RunLoop.main)
             .sink { [unowned self] framework in
-                let sb = UIStoryboard(name: "Detail", bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-                vc.viewModel = FrameworkDetailViewModel(framework: framework)
-                self.present(vc, animated: true)
-        }.store(in: &subscriptions)
+                //                let sb = UIStoryboard(name: "Detail", bundle: nil)
+                //                let vc = sb.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
+                //                vc.viewModel = FrameworkDetailViewModel(framework: framework)
+                //                self.present(vc, animated: true)
+                
+                let detailViewModel = FrameworkDetailViewModelSwiftUI(framework: framework)
+                let detailView = FrameworkDetailView(viewModel: detailViewModel)
+                let hostingController = UIHostingController(rootView: detailView)
+                self.present(hostingController, animated: true)
+                
+            }.store(in: &subscriptions)
         
         // output: data, state 변경에 따라서, UI 업데이트 할것
         // - items 세팅이 되었을때 컬렉션뷰를 업데이트
